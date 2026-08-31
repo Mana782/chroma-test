@@ -48,18 +48,18 @@
       <h2>輪郭調整</h2>
 
       <div class="control">
-        <div class="row"><span>キー強度</span><output id="keyOut">0.22</output></div>
-        <input id="key" type="range" min="0.08" max="0.55" step="0.01" value="0.22">
+        <div class="row"><span>キー強度</span><output id="keyOut">0.12</output></div>
+        <input id="key" type="range" min="0.08" max="0.55" step="0.01" value="0.12">
       </div>
 
       <div class="control">
-        <div class="row"><span>境界の柔らかさ</span><output id="softOut">0.22</output></div>
-        <input id="soft" type="range" min="0.03" max="0.50" step="0.01" value="0.22">
+        <div class="row"><span>境界の柔らかさ</span><output id="softOut">0.12</output></div>
+        <input id="soft" type="range" min="0.03" max="0.50" step="0.01" value="0.12">
       </div>
 
       <div class="control">
-        <div class="row"><span>デスピル強度</span><output id="spillOut">0.90</output></div>
-        <input id="spill" type="range" min="0" max="1.5" step="0.05" value="0.90">
+        <div class="row"><span>デスピル強度</span><output id="spillOut">1.20</output></div>
+        <input id="spill" type="range" min="0" max="1.5" step="0.05" value="1.20">
       </div>
 
       <div class="control">
@@ -97,7 +97,7 @@ for(const id of controls){
 }
 
 $("reset").addEventListener("click",()=>{
-  const vals={key:.22,soft:.22,spill:.90,erode:.05};
+  const vals={key:.12,soft:.12,spill:1.20,erode:.05};
   for(const [k,v] of Object.entries(vals)){ $(k).value=v; $(k+"Out").value=Number(v).toFixed(2); }
   $("despill").checked=true; $("matte").checked=false;
 });
